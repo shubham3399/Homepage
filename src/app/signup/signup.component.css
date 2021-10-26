@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    padding:5px;
+}
+.layout{
+    margin:0px auto;
+    width:50%;
+    height:auto;
+    background-color: rgb(228, 228, 125);
+}
+
+input.ng-invalid{
+    border-left:5px solid red;
+}
+
+.error{
+    color:red;
+}
+.drop_down{
+    padding:5px;
+    width:100%;
+    border-radius:5px;
+}
+.form-check-input{
+    margin:0px;
+}

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.layout{
+    margin:0px auto;
+    width:50%;
+    height:auto;
+    background-color: rgb(228, 228, 125);
+}
+input{
+    padding:5px;
+}

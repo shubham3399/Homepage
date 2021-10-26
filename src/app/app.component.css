@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand{
+  color:whitesmoke;
+  padding:5px;
+}
+.detail{
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 18px;
+    padding:10px;
+}
