@@ -8,19 +8,25 @@ import { SignupComponent } from './signup/signup.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user-list/user-list.component';
+import { SingleuserdetailComponent } from './singleuserdetail/singleuserdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     SignupComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    UserListComponent,
+    SingleuserdetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

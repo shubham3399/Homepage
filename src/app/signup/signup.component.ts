@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators} from '@angular/forms';
+import { RequestServiceService } from '../request-service.service';
+import { ActivatedRoute,Router } from '@angular/router';
 
 
 @Component({
@@ -20,12 +22,39 @@ export class SignupComponent implements OnInit {
   })
   
   
-  constructor() { }
+  constructor(private httpService:RequestServiceService, public route:ActivatedRoute, public router: Router) { }
 
   ngOnInit(): void {
+    this.createUser();
   }
 
  onSubmit(){
    console.log(this.signup.value);
+ }
+
+ createUser(){
+ console.log('Create User');
+ if(this.signup.valid){
+   let data={
+     "id":2,
+     "email":this.signup.value.email,
+     "first_name":this.signup.value.firstname,
+     "last_name":this.signup.value.lastname,
+     "number":this.signup.value.number,
+     "country":this.signup.value.country,
+     "gender":this.signup.value.exampleRadios  
+   }
+   this.httpService.createUser(data).subscribe((Response:any)=>{
+     console.log('CreateUser',Response);
+     setTimeout(
+       ()=> {
+        this.router.navigate(['userlist'])
+       },2000
+      )
+   },(error)=>{
+     console.log('CreateUser',error);
+   }
+   );
+ }
  }
 }
