@@ -5,7 +5,6 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {LoginpageComponent} from './loginpage/loginpage.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { SingleuserdetailComponent } from './singleuserdetail/singleuserdetail.component';
-
 const routes: Routes = [
   {
     path:'signup',
@@ -26,7 +25,7 @@ const routes: Routes = [
   {
     path:'view/:id',
     component:SingleuserdetailComponent
-  }
+  },
 ];
 
 @NgModule({

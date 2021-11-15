@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestServiceService } from '../request-service.service';
-
+import { AdduserComponent } from '../adduser/adduser.component';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
+
 export class UserListComponent implements OnInit {
 userList : any = [];
 
@@ -31,6 +32,12 @@ userList : any = [];
       this.routers.navigate([link + '/'+ id])
     }
 
+  }
+
+
+  selectedUser:any;
+  selectUser(user:any){
+    this.selectedUser = user;
   }
 
 }

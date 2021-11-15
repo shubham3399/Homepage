@@ -5,8 +5,12 @@
 }
 .userdetails{
     width:50%;
-    margin:0px auto;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
+
 .rowdetails{
     border:2px solid black;
 }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -11,6 +10,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserListComponent } from './user-list/user-list.component';
 import { SingleuserdetailComponent } from './singleuserdetail/singleuserdetail.component';
+import { AdduserComponent } from './adduser/adduser.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { SingleuserdetailComponent } from './singleuserdetail/singleuserdetail.c
     SignupComponent,
     LoginpageComponent,
     UserListComponent,
-    SingleuserdetailComponent
+    SingleuserdetailComponent,
+    AdduserComponent,
+   
   ],
   imports: [
     BrowserModule,

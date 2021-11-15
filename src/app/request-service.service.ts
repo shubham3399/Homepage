@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,4 +19,8 @@ export class RequestServiceService {
   getData(id:string){
     return this.http.get(this.url + "users/" + id );
   }
+  updateDetails(id:any){
+    return this.http.put(this.url + "users/" + id, id);
+  }
+ 
 }
