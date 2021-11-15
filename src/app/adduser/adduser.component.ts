@@ -23,7 +23,6 @@ ngOnChanges(changes: SimpleChanges) {
   console.log('OnChanges',changes);
   console.log(JSON.stringify(changes));
 
-  // tslint:disable-next-line:forin
   for (let propName in changes) {
        let change = changes[propName];
        this.data[propName] = change.currentValue
@@ -32,11 +31,10 @@ ngOnChanges(changes: SimpleChanges) {
   console.log('my data', this.data)
 }
 
-update(fname:any,lname:any,emailname:any){
-  this.selectedUser.first_name=fname.value;
-  this.selectedUser.last_name=lname.value;
-  this.selectedUser.email=emailname.value;
-}
+update(){
+   let user = this.data.selectedUser ;
+  this.updateUserList.emit(user);
+ }
 }
  
 

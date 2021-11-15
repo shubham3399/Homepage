@@ -17,5 +17,5 @@
         </tr>
     </table>
 
-    <app-adduser [selectedUser]="selectedUser"></app-adduser>
+    <app-adduser [selectedUser]="selectedUser" (updateUserList)="updateValue($event)"></app-adduser>
 </div>

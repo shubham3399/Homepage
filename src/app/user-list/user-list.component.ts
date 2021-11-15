@@ -40,4 +40,8 @@ userList : any = [];
     this.selectedUser = user;
   }
 
+  updateValue(data : any){
+    console.log('event', data);
+  }
+
 }
