@@ -42,6 +42,13 @@ userList : any = [];
 
   updateValue(data : any){
     console.log('event', data);
+    //Storing change value in Array 
+    let foundIndex = this.userList.findIndex((element: { id: any; }) =>
+      element.id === data.id
+      )
+    console.log("Changes",this.userList.splice(foundIndex,1,data)); 
+    //Splice indicating starting index and number of elements to remove 
+     this.userList.splice(foundIndex,1,data)
   }
 
 }

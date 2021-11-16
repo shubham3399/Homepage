@@ -35,6 +35,8 @@ update(){
    let user = this.data.selectedUser ;
   this.updateUserList.emit(user);
  }
+
+ 
 }
  
 
