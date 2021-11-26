@@ -6,6 +6,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RequestServiceService {
+  static getToken() {
+    throw new Error('Method not implemented.');
+  }
+  getloginUserData(loginUserData: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http:HttpClient) { }
   private url = "https://reqres.in/api/";
@@ -22,5 +28,13 @@ export class RequestServiceService {
   updateDetails(id:any){
     return this.http.put(this.url + "users/" + id, id);
   }
- 
+  userLogin(user:any){
+    return this.http.post(this.url + "login",user)
+  }
+  loggedIn(){
+    return !!localStorage.getItem('token');
+  }
+  getToken(){
+    return localStorage.getItem('token');
+  }
 }

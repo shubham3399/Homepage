@@ -7,13 +7,13 @@
             <th class="heading">Last Name</th>
             <th class="head">Avatar</th>
         </tr>
-        <tr *ngFor= "let user of userList">
+        <tr *ngFor="let user of userList">
             <td class="heading">{{user.id}}</td>
             <td class="heading" (click)="selectUser(user)"> {{user.email}}</td>
             <td class="heading">{{user.first_name}}</td>
             <td class="heading">{{user.last_name}}</td>
             <td class="heading">{{user.avatar}}</td>
-            <td class="heading"><img (click) = "reDirect('view',user.id)"  [src]="user.avatar"></td>
+            <td class="heading"><img (click)="reDirect('view',user.id)" [src]="user.avatar"></td>
         </tr>
     </table>
 

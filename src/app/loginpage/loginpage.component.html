@@ -1,16 +1,16 @@
-<div class="layout">
-<form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    </div>
-    <br>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin">
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="email" id="inputEmail" class="form-control" name="email" [(ngModel)]="loginUserData.email"
+        placeholder="Email address" autocomplete="off" autofocus>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"
+        [(ngModel)]="loginUserData.password">
+      <div id="remember" class="checkbox">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="verify()">Sign in</button>
+    </form>
   </div>
-  
+</div>
