@@ -13,6 +13,7 @@ import { SingleuserdetailComponent } from './singleuserdetail/singleuserdetail.c
 import { AdduserComponent } from './adduser/adduser.component';
 import { VerificationGuard } from './verification.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [VerificationGuard,
   {
