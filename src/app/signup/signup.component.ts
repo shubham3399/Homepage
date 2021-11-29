@@ -48,7 +48,7 @@ export class SignupComponent implements OnInit {
      console.log('CreateUser',Response);
      setTimeout(
        ()=> {
-        this.router.navigate(['userlist'])
+        this.router.navigate(['loginpage'])
        },2000
       )
    },(error)=>{

@@ -1,3 +1,10 @@
+<div class="container searchbar">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" placeholder="Search" [(ngModel)]="filteredString">
+        </div>
+    </div>
+</div>
 <div class="userdetails">
     <table>
         <tr class="rowdetails">
@@ -6,8 +13,9 @@
             <th class="heading">First Name</th>
             <th class="heading">Last Name</th>
             <th class="head">Avatar</th>
+            <th class="head"></th>
         </tr>
-        <tr *ngFor="let user of userList">
+        <tr *ngFor="let user of userList | filter:filteredString">
             <td class="heading">{{user.id}}</td>
             <td class="heading" (click)="selectUser(user)"> {{user.email}}</td>
             <td class="heading">{{user.first_name}}</td>

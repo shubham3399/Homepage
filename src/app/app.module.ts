@@ -14,7 +14,7 @@ import { AdduserComponent } from './adduser/adduser.component';
 import { VerificationGuard } from './verification.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserListComponent,
     SingleuserdetailComponent,
     AdduserComponent,
-   
+    FilterPipe, 
   ],
   imports: [
     BrowserModule,

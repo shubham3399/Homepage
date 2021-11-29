@@ -16,6 +16,8 @@ userList : any = [];
   ngOnInit(): void {
     this.getUserList();
   }
+  filteredString: string = ''; //Default value
+
   getUserList(){
     this.httpService.getUsers().subscribe((response: any) =>{
       console.log('getUserList', response);
@@ -51,4 +53,5 @@ userList : any = [];
      this.userList.splice(foundIndex,1,data)
   }
 
+  
 }
